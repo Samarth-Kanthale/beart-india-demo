@@ -4,6 +4,7 @@ This is the static frontend codebase for the **Beart India Group** website — a
 
 ## Overview
 This static site is designed to showcase:
+
 	- Investment & Wealth Management Services
 	- NRI Financial and Tax Advisory
 	- Life & Health Insurance Offerings
@@ -18,13 +19,16 @@ This static site is designed to showcase:
  
 ## Future Development
 This project is currently static-only with  no API integrations yet.
+
 Planned enhancements include:
+
 	- Integration with APIs for Mutual Funds, Insurance, and Loans
 	- Dynamic forms and CRM connectivity
 	- User authentication and dashboards
 
 ## Deployment
 Can be hosted easily via:
+
 	- GitHub & Vercel
 
 ## Developer
