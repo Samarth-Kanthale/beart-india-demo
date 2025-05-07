@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* font-family: Arial, Helvetica, sans-serif; -- overridden by layout.tsx */
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 222.2 84% 4.9%; /* Almost Black / Very Dark Blue */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 217 91% 58%; /* Modern Blue (e.g., #3B82F6) */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 210 40% 96.1%; /* Light Gray */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Dark Gray */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%; /* Mid Gray */
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214.3 31.8% 91.4%; /* Light Gray Border */
+    --input: 214.3 31.8% 91.4%;
+    --ring: 217 91% 58%; /* New primary blue */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    
+    /* Custom Accents */
+    --accent-investment: 145 58% 38%; /* Darker, sophisticated green (e.g., #216d4a) */
+    --accent-investment-foreground: 0 0% 100%; /* White */
+    --accent-software: 38 92% 50%; /* Rich Amber/Orange (e.g., #F29900) */
+    --accent-software-foreground: 222.2 84% 4.9%; /* Almost Black for contrast */
+
+    /* Sidebar colors (can be aligned with main theme or kept distinct) */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222.2 84% 4.9%;
+    --sidebar-primary: 217 91% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96.1%;
+    --sidebar-accent-foreground: 222.2 47.4% 11.2%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 217 91% 58%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%; /* Very Dark Blue / Almost Black */
+    --foreground: 210 40% 98%; /* Off-White */
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 65%; /* Lighter Blue for dark mode */
+    --primary-foreground: 222.2 47.4% 11.2%; /* Dark text for contrast on light blue */
+    --secondary: 217.2 32.6% 17.5%; /* Dark Gray */
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%; /* Lighter Mid Gray */
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 217 91% 65%; /* Dark mode primary blue */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    /* Custom Accents - Dark (Ensure they work well on dark background) */
+    --accent-investment: 145 58% 45%; /* Slightly lighter green for dark mode visibility */
+    --accent-investment-foreground: 0 0% 100%; 
+    --accent-software: 38 92% 55%; /* Slightly lighter orange for dark mode visibility */
+    --accent-software-foreground: 222.2 84% 4.9%;
+
+    /* Sidebar colors - Dark */
+    --sidebar-background: 222.2 84% 4.9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 65%;
+    --sidebar-primary-foreground: 222.2 47.4% 11.2%;
+    --sidebar-accent: 217.2 32.6% 17.5%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-ring: 217 91% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1; /* Enables standard ligatures and contextual alternates for better typography */
+  }
+}
+
+/* Custom button styles using CSS variables */
+@layer components {
+  .btn-investment {
+    @apply bg-[hsl(var(--accent-investment))] text-[hsl(var(--accent-investment-foreground))] hover:bg-[hsl(var(--accent-investment)/0.9)];
+  }
+  .btn-software {
+    @apply bg-[hsl(var(--accent-software))] text-[hsl(var(--accent-software-foreground))] hover:bg-[hsl(var(--accent-software)/0.9)];
+  }
+  .btn-investment-outline {
+      @apply border border-[hsl(var(--accent-investment))] bg-transparent text-[hsl(var(--accent-investment))] hover:bg-[hsl(var(--accent-investment)/0.1)];
+  }
+  .btn-software-outline {
+       @apply border border-[hsl(var(--accent-software))] bg-transparent text-[hsl(var(--accent-software))] hover:bg-[hsl(var(--accent-software)/0.1)];
+  }
+}
