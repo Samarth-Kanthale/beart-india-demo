@@ -40,5 +40,7 @@ Can be hosted easily via:
 For inquiries or contributions:
 
 **Email**: hello@beartindia.com  
+
 **Temporary Website**: https://beart-india-demo.vercel.app/
+
 **Website**: [www.beartindia.com](https://www.beartindia.com)
