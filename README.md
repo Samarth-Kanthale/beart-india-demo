@@ -1,6 +1,6 @@
-# Beart India Website (Frontend Demo)
+# Beart India Website
 
-This is the static frontend codebase for the **Beart India Group** website — a multidisciplinary platform offering financial advisory, SME digital services, and social impact initiatives through Beart Foundation.
+This is the static frontend codebase for the **Beart India Group, Pune** website — a multidisciplinary platform offering financial advisory, SME digital services, and social impact initiatives through Beart Foundation.
 
 ## Overview
 This static site is designed to showcase:
@@ -39,7 +39,9 @@ Can be hosted easily via:
 
 For inquiries or contributions:
 
-**Email**: hello@beartindia.com  
+**Email**: info@beartindia.com  
+
+**Linked-In**: https://www.linkedin.com/company/beartindia
 
 **Temporary Website**: https://beart-india-demo.vercel.app/
 
